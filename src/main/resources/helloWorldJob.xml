@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-2.1.xsd">
+
+	<import resource="applicationContext.xml" />
+
+	<batch:job id="print">
+		<batch:step id="step1">
+			<batch:tasklet ref="helloWorldTasklet" />
+		</batch:step>
+	</batch:job>
+
+	<bean name="helloWorldTasklet" class="br.com.wbotelhos.spring.batch.task.HelloWorldTasklet" />
+
+	<!--
+		mvn exec:java -Dexec.mainClass=org.springframework.batch.core.launch.support.CommandLineJobRunner -Dexec.args="helloWorldJob.xml print"
+	-->
+
+</beans>

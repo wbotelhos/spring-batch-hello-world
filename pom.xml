@@ -59,7 +59,7 @@
 					cd spring-batch-hello-world
 					mvn clean compile assembly:single
 					cd target
-					java -jar spring-batch-hello-world-0.0.1-with-dependencies.jar simpleJob.xml helloWorldJob
+					java -jar spring-batch-hello-world-0.0.1-with-dependencies.jar helloWorldJob.xml print
 				 -->
 				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>
