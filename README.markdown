@@ -11,12 +11,10 @@ Washington Botelho [[Blog](http://wbotelhos.com.br) | [Twitter](http://twitter.c
 [[Site](http://static.springsource.org/spring-batch/) | [Documentation](http://static.springsource.org/spring-batch/reference/index.html)]
 
 ## Keywords
-+ Job;
+
++ MapJobRepositoryFactoryBean;
 + ResourcelessTransactionManager;
-+ Launcher;
-+ Repository;
-+ Spring;
-+ Step;
++ SimpleJobLauncher;
 + Tasklet.
 
 ## Buy me a coffee
